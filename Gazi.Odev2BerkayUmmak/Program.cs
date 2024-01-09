@@ -4,14 +4,30 @@
     {
         static void Main(string[] args)
         {
+            string a, b, c;
+            Console.WriteLine("Bir dil seçiniz/Select a language(E/T)");
+           string cev= Console.ReadLine().ToUpper();
             Random rnd = new Random();
+            if (cev == "E")
+            {
+                a = "Enter the starting number:";
+                b = "Enter the ending number:";
+                c = "Enter the count of numbers:";
 
-            Console.WriteLine("Başlangıç sayısını giriniz:");
+            }
+            else
+            {
+                a = "Başlangıç sayısını giriniz:";
+                b = "Bitiş sayısı giriniz:";
+                c = "Sayı adeti gir:";
+            }
+
+            Console.WriteLine(a);
             byte start = byte.Parse(Console.ReadLine());
-            Console.WriteLine("Bitiş sayısı giriniz:");
+            Console.WriteLine(b);
             byte end = byte.Parse(Console.ReadLine());
 
-            Console.WriteLine("Sayı adeti gir:");
+            Console.WriteLine(c);
             byte count = byte.Parse(Console.ReadLine());
 
 
@@ -42,6 +58,9 @@
             {
                 Console.WriteLine(numbers[i]);
             }
+           
+           
+
 
         }
     }
